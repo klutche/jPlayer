@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>jPlayer</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/jplayer.blue.monday.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+	$('#audio_player_1').jPlayer({
+		ready: function(){
+			$(this).jPlayer('setMedia', {
+				mp3: 'media/01.mp3'
+			});
+		},
+		play: function() {
+			$(this).jPlayer("pauseOthers");
+		},
+		swfPath: './',
+		wmode: 'window',
+		keyEnabled: true
+	});
+	
+	$('#audio_player_2').jPlayer({
+		ready: function(){
+			$(this).jPlayer('setMedia', {
+				mp3: 'media/02.mp3'
+			});
+		},
+		play: function() {
+			$(this).jPlayer("pauseOthers");
+		},
+		swfPath: './',
+		cssSelectorAncestor: "#jp_container_2",
+		wmode: 'window',
+		keyEnabled: true
+	});
+	
+});
+</script>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body>
+
+<!-- player_01 -->
+<div id="audio_player_1" class="jp-jplayer"></div>
+<div id="jp_container_1" class="jp-audio">
+<div class="jp-type-single">
+<div class="jp-gui jp-interface">
+<ul class="jp-controls">
+<li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+<li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+<li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+<li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+<li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+<li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+</ul>
+<div class="jp-progress">
+<div class="jp-seek-bar">
+<div class="jp-play-bar"></div>
+</div>
+</div>
+<div class="jp-volume-bar">
+<div class="jp-volume-bar-value"></div>
+</div>
+<div class="jp-time-holder">
+<div class="jp-current-time"></div>
+<div class="jp-duration"></div>
+<ul class="jp-toggles">
+<li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
+<li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+</ul>
+</div>
+</div>
+<div class="jp-title">
+<ul>
+<li>Music01</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- /player_01 -->
+
+<!-- player_02 -->
+<div id="audio_player_2" class="jp-jplayer"></div>
+<div id="jp_container_2" class="jp-audio">
+<div class="jp-type-single">
+<div class="jp-gui jp-interface">
+<ul class="jp-controls">
+<li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+<li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+<li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+<li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+<li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+<li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+</ul>
+<div class="jp-progress">
+<div class="jp-seek-bar">
+<div class="jp-play-bar"></div>
+</div>
+</div>
+<div class="jp-volume-bar">
+<div class="jp-volume-bar-value"></div>
+</div>
+<div class="jp-time-holder">
+<div class="jp-current-time"></div>
+<div class="jp-duration"></div>
+<ul class="jp-toggles">
+<li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
+<li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+</ul>
+</div>
+</div>
+<div class="jp-title">
+<ul>
+<li>Music02</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- /player_02 -->
+
+</body>
+</html>
